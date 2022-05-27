@@ -93,4 +93,49 @@ section .heading__section {
   margin: 0.5em 0 0 0;
 }
 
+.box {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  border-radius: 1em;
+  padding: 1em;
+  margin: 0.5em 0;
+}
+.box .box__mark {
+  flex: 0 0 10em;
+  padding-left: 1.5em;
+  text-align: left;
+}
+.box .box__mark .full__time {
+  margin-top: 0.5em;
+}
+.box .box__mark .full__time span {
+  background: white;
+  border-radius: 0.2em;
+  padding: 0.25em 0.5em;
+}
+.box .box__divider {
+  border-left: 1px solid pink;
+  height: 150px;
+}
+.box .box__content__headings {
+  display: flex;
+  gap: 1em;
+}
+.box .box__content__headings h1 {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 900;
+}
+.box .box__content__headings .coloured__heading {
+  color: var(--dark-pink);
+}
+.box p {
+  margin-top: 0;
+}
+
+.experience .box {
+  background: var(--light-pink);
+}
+
 /*# sourceMappingURL=styles.css.map */
