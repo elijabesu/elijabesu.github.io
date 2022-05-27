@@ -138,4 +138,11 @@ section .heading__section {
   background: var(--light-pink);
 }
 
+.education .box {
+  background: white;
+}
+.education .box .box__divider {
+  height: 75px;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -85,7 +85,6 @@ section {
   .skills {
     display: flex;
     justify-content: space-between;
-    //margin-right: 12em;
     img {
       width: 25px;
       height: 25px;
@@ -137,4 +136,11 @@ section {
 
 .experience .box {
     background: var(--light-pink);
+}
+
+.education .box {
+  background: white;
+  .box__divider {
+    height: 75px;
+  }
 }
