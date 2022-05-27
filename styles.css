@@ -17,6 +17,10 @@ body h1 {
   font-family: var(--heading-font-family);
 }
 
+.coloured {
+  background: var(--light-pink);
+}
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -54,7 +58,39 @@ header .container nav ul a {
   color: black;
 }
 header .container nav ul a:hover {
-  border-bottom: 3px solid var(--light-pink);
+  border-bottom: 3px solid var(--dark-pink);
+}
+
+section {
+  padding: 1em;
+}
+section:target {
+  padding-top: 5em;
+}
+section .heading__section {
+  padding: 0.5em 0 0 1.5em;
+  margin: 0;
+}
+
+.about {
+  display: flex;
+}
+.about img {
+  margin: 0 0.6em 0 2.5em;
+  width: 200px;
+  height: 200px;
+}
+.about .heading__section {
+  padding: 0;
+}
+.about .skills {
+  display: flex;
+  justify-content: space-between;
+}
+.about .skills img {
+  width: 25px;
+  height: 25px;
+  margin: 0.5em 0 0 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,6 +16,11 @@ body {
     font-family: var(--heading-font-family);
   }
 }
+
+.coloured {
+  background: var(--light-pink);
+}
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -48,10 +53,43 @@ header {
         a {
           color: black;
           &:hover {
-            border-bottom: 3px solid var(--light-pink);
+            border-bottom: 3px solid var(--dark-pink);
           }
         }
       }
+    }
+  }
+}
+
+section {
+  padding: 1em;
+  &:target {
+    padding-top: 5em;
+  }
+  .heading__section {
+    padding: .5em 0 0 1.5em;
+    margin: 0;
+  }
+}
+
+.about {
+  display: flex;
+  img {
+    margin: 0 .6em 0 2.5em;
+    width: 200px;
+    height: 200px;
+  }
+  .heading__section {
+    padding: 0;
+  }
+  .skills {
+    display: flex;
+    justify-content: space-between;
+    //margin-right: 12em;
+    img {
+      width: 25px;
+      height: 25px;
+      margin: .5em 0 0 0;
     }
   }
 }
