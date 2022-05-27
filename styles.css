@@ -145,4 +145,8 @@ section .heading__section {
   height: 75px;
 }
 
+footer {
+  text-align: right;
+}
+
 /*# sourceMappingURL=styles.css.map */
