@@ -67,7 +67,7 @@ section {
   padding: 1em;
 }
 section .heading__section {
-  padding: 0.5em 0 0 1.5em;
+  padding: 0.5em 0 0 0.5em;
   margin: 0;
 }
 section p {
@@ -117,7 +117,7 @@ section p {
   padding: 0.25em 0.5em;
 }
 .box .box__divider {
-  border-left: 1px solid pink;
+  border-left: 1px solid var(--dark-pink);
   height: 150px;
 }
 .box .box__content__headings {
@@ -169,9 +169,6 @@ section p {
   column-count: 2;
 }
 
-.contact__form {
-  padding: 0 1.5em;
-}
 .contact__form .contact__form__columns {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -208,7 +205,15 @@ section p {
 }
 
 footer {
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .social__icons svg {
+  width: 25px;
+}
+footer .social__icons svg:hover path {
+  fill: var(--dark-pink);
 }
 
 /*# sourceMappingURL=styles.css.map */
