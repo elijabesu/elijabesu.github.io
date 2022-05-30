@@ -77,6 +77,12 @@ section .heading__section {
 section p {
   text-align: justify;
 }
+section a {
+  color: black;
+}
+section a:hover {
+  color: var(--dark-pink);
+}
 
 .about {
   display: flex;
@@ -168,9 +174,26 @@ section p {
 .skills .skills__box .skills__box__content ul {
   list-style-type: none;
   padding: 0;
+  margin: 0.25em 0;
 }
 .skills .skills__box .skills__box__content .list__longer {
   column-count: 2;
+}
+
+.projects .projects__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5em;
+  margin: 2.5em 0;
+}
+.projects .projects__box h1 {
+  font-family: var(--font-family);
+}
+.projects .projects__box img {
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .contact__form .contact__form__columns {
