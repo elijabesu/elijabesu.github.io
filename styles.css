@@ -70,14 +70,17 @@ section .heading__section {
   padding: 0.5em 0 0 1.5em;
   margin: 0;
 }
+section p {
+  text-align: justify;
+}
 
 .about {
   display: flex;
 }
 .about img {
   margin: 0 0.6em 0 2.5em;
-  width: 200px;
-  height: 200px;
+  width: 175px;
+  height: 175px;
 }
 .about .heading__section {
   padding: 0;
@@ -97,7 +100,7 @@ section .heading__section {
   gap: 1.5em;
   align-items: center;
   border-radius: 1em;
-  padding: 1em;
+  padding: 1em 2em 1em 1em;
   margin: 0.5em 0;
 }
 .box .box__mark {
@@ -142,6 +145,28 @@ section .heading__section {
 }
 .education .box .box__divider {
   height: 75px;
+}
+
+.skills .skills__box {
+  display: flex;
+  justify-content: space-evenly;
+}
+.skills .skills__box h1 {
+  font-family: var(--font-family);
+  margin-bottom: 0;
+}
+.skills .skills__box .skills__box__content .skills__box__content__skill {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: space-between;
+}
+.skills .skills__box .skills__box__content ul {
+  list-style-type: none;
+  padding: 0;
+}
+.skills .skills__box .skills__box__content .list__longer {
+  column-count: 2;
 }
 
 .contact__form {
