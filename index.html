@@ -166,7 +166,16 @@
 </section>
 <div class="coloured">
     <section id="contact" class="container">
-        <h1 class="heading__section">Contact</h1>
+        <h1 class="heading__section">Contact me</h1>
+        <form class="contact__form" action="https://formspree.io/f/mknyypyv" method="POST">
+            <div class="contact__form__columns">
+                <input required type="text" class="contact__form__input" name="name" placeholder="Full name">
+                <input required type="email" class="contact__form__input" name="email" placeholder="E-mail">
+            </div>
+            <input required type="text" class="contact__form__input" name="subject" placeholder="Subject">
+            <textarea required class="contact__form__textarea" name="message" cols="30" rows="10" placeholder="Your message"></textarea>
+            <input type="submit" class="contact__form__button" value="Send message">
+        </form>
     </section>
 </div>
 <footer class="container">

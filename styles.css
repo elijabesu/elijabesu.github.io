@@ -3,6 +3,8 @@
   --heading-font-family: "Gochi Hand", cursive;
   --light-pink: #ffedef;
   --dark-pink: #ff3256;
+  --header-height: 5em;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
@@ -30,7 +32,7 @@ header {
   position: sticky;
   top: 0;
   background: white;
-  height: 5em;
+  height: var(--header-height);
 }
 header .container {
   display: flex;
@@ -63,9 +65,6 @@ header .container nav ul a:hover {
 
 section {
   padding: 1em;
-}
-section:target {
-  padding-top: 5em;
 }
 section .heading__section {
   padding: 0.5em 0 0 1.5em;
@@ -143,6 +142,44 @@ section .heading__section {
 }
 .education .box .box__divider {
   height: 75px;
+}
+
+.contact__form {
+  padding: 0 1.5em;
+}
+.contact__form .contact__form__columns {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-column-gap: 1.5em;
+}
+.contact__form .contact__form__input {
+  width: 100%;
+  height: 2.5em;
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.contact__form .contact__form__input:focus {
+  outline: none;
+}
+.contact__form .contact__form__textarea {
+  width: 100%;
+  height: 7.5em;
+  padding: 0.5em;
+  font-family: Roboto, sans-serif;
+  margin: 0.5em 0;
+  resize: none;
+}
+.contact__form .contact__form__textarea:focus {
+  outline: none;
+}
+.contact__form .contact__form__button {
+  background: var(--dark-pink);
+  border: none;
+  border-radius: 0.3em;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  margin: 0.5em 0;
 }
 
 footer {
