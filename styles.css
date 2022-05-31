@@ -236,8 +236,18 @@ footer .social__icons svg {
 footer .social__icons svg:hover path {
   fill: var(--dark-pink);
 }
+footer a {
+  color: black;
+}
+footer a:hover {
+  color: var(--dark-pink);
+}
 
 @media only screen and (max-width: 1050px) {
+  header .container nav ul {
+    gap: 1.25em;
+  }
+
   .skills .skills__box .skills__box__content .list__longer {
     column-count: 1;
   }
@@ -253,7 +263,7 @@ footer .social__icons svg:hover path {
     margin-top: 0;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   header nav {
     display: none;
   }

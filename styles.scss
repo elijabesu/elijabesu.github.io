@@ -244,10 +244,20 @@ footer {
       }
     }
   }
+  a {
+    color: black;
+    &:hover {
+      color: var(--dark-pink);
+    }
+  }
 }
 
 // breakpoints
 @media only screen and (max-width: 1050px) {
+  header .container nav ul {
+    gap: 1.25em;
+  }
+
   .skills .skills__box {
     .skills__box__content .list__longer {
       column-count: 1;
@@ -266,7 +276,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   header nav {
     display: none;
   }
