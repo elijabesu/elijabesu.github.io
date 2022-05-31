@@ -94,14 +94,28 @@ section a:hover {
 .about .heading__section {
   padding: 0;
 }
-.about .skills {
+
+.skills .skills__box {
   display: flex;
+  justify-content: space-evenly;
+}
+.skills .skills__box h1 {
+  font-family: var(--font-family);
+  margin-bottom: 0;
+}
+.skills .skills__box .skills__box__content .skills__box__content__skill {
+  display: flex;
+  align-items: center;
+  gap: 1em;
   justify-content: space-between;
 }
-.about .skills img {
-  width: 25px;
-  height: 25px;
-  margin: 0.5em 0 0 0;
+.skills .skills__box .skills__box__content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.25em 0;
+}
+.skills .skills__box .skills__box__content .list__longer {
+  column-count: 2;
 }
 
 .box {
@@ -154,34 +168,6 @@ section a:hover {
 }
 .education .box .box__divider {
   height: 75px;
-}
-
-.skills .skills__box {
-  display: flex;
-  justify-content: space-evenly;
-}
-.skills .skills__box h1 {
-  font-family: var(--font-family);
-  margin-bottom: 0;
-}
-.skills .skills__box .skills__box__together {
-  display: flex;
-  gap: 1em;
-  justify-content: space-between;
-}
-.skills .skills__box .skills__box__content .skills__box__content__skill {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  justify-content: space-between;
-}
-.skills .skills__box .skills__box__content ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0.25em 0;
-}
-.skills .skills__box .skills__box__content .list__longer {
-  column-count: 2;
 }
 
 .projects .projects__box {
@@ -252,15 +238,8 @@ footer .social__icons svg:hover path {
 }
 
 @media only screen and (max-width: 1050px) {
-  .skills .skills__box .skills__box__together {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-@media only screen and (max-width: 850px) {
-  header .container nav ul {
-    flex-wrap: wrap;
-    gap: 1em;
+  .skills .skills__box .skills__box__content .list__longer {
+    column-count: 1;
   }
 
   .box .box__content__headings {
@@ -273,17 +252,57 @@ footer .social__icons svg:hover path {
   .box .box__content__headings .coloured__heading {
     margin-top: 0;
   }
+}
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about .heading__section {
+    padding: 0.5em 0 0 0.5em;
+  }
 
   .skills .skills__box {
     flex-direction: column;
   }
-  .skills .skills__box .skills__box__together {
-    flex-direction: row;
+
+  .box {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
+  .box .box__mark {
+    flex-basis: 0;
+    padding: 0;
+    display: flex;
+    gap: 1em;
+  }
+  .box .box__mark .full__time {
+    margin: 0;
+  }
+  .box .box__divider {
+    border-left: 0;
+    height: 0;
   }
 
+  .education .box .box__divider {
+    height: 0;
+  }
+
+  .projects .projects__box {
+    flex-direction: column;
+    gap: 0;
+    margin: 1em 0;
+  }
+  .projects .projects__box .projects__box__description {
+    order: 2;
+  }
   .projects .projects__box img {
-    width: 200px;
-    height: 100px;
+    order: 1;
   }
 }
 

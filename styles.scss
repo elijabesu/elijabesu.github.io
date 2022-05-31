@@ -92,13 +92,31 @@ section {
   .heading__section {
     padding: 0;
   }
-  .skills {
+}
+
+.skills {
+  .skills__box {
     display: flex;
-    justify-content: space-between;
-    img {
-      width: 25px;
-      height: 25px;
-      margin: .5em 0 0 0;
+    justify-content: space-evenly;
+    h1 {
+      font-family: var(--font-family);
+      margin-bottom: 0;
+    }
+    .skills__box__content {
+      .skills__box__content__skill {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        justify-content: space-between;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: .25em 0;
+      }
+      .list__longer {
+        column-count: 2;
+      }
     }
   }
 }
@@ -152,38 +170,6 @@ section {
   background: white;
   .box__divider {
     height: 75px;
-  }
-}
-
-.skills {
-  .skills__box {
-    display: flex;
-    justify-content: space-evenly;
-    h1 {
-      font-family: var(--font-family);
-      margin-bottom: 0;
-    }
-    .skills__box__together {
-      display: flex;
-      gap: 1em;
-      justify-content: space-between;
-    }
-    .skills__box__content {
-      .skills__box__content__skill {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-        justify-content: space-between;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-        margin: .25em 0;
-      }
-      .list__longer {
-        column-count: 2;
-      }
-    }
   }
 }
 
@@ -262,16 +248,10 @@ footer {
 
 // breakpoints
 @media only screen and (max-width: 1050px) {
-  .skills .skills__box .skills__box__together {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  header .container nav ul {
-    flex-wrap: wrap;
-    gap: 1em;
+  .skills .skills__box {
+    .skills__box__content .list__longer {
+      column-count: 1;
+    }
   }
 
   .box .box__content__headings {
@@ -284,16 +264,57 @@ footer {
       margin-top: 0;
     }
   }
+}
 
-  .skills .skills__box {
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  .about {
     flex-direction: column;
-    .skills__box__together {
-      flex-direction: row;
+    align-items: center;
+    .heading__section {
+      padding: .5em 0 0 .5em;
     }
   }
 
-  .projects .projects__box img {
-    width: 200px;
-    height: 100px;
+  .skills .skills__box {
+    flex-direction: column;
+  }
+
+  .box {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    .box__mark {
+      flex-basis: 0;
+      padding: 0;
+      display: flex;
+      gap: 1em;
+      .full__time {
+        margin: 0;
+      }
+    }
+    .box__divider {
+      border-left: 0;
+      height: 0;
+    }
+  }
+
+  .education .box .box__divider {
+    height: 0;
+  }
+
+  .projects .projects__box {
+    flex-direction: column;
+    gap: 0;
+    margin: 1em 0;
+    .projects__box__description {
+      order: 2;
+    }
+    img {
+      order: 1;
+    }
   }
 }
