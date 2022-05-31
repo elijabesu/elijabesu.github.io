@@ -258,6 +258,11 @@ footer .social__icons svg:hover path {
   }
 }
 @media only screen and (max-width: 850px) {
+  header .container nav ul {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
   .box .box__content__headings {
     flex-direction: column;
     gap: 0.25em;
