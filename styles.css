@@ -61,12 +61,12 @@ header .container .header__left img {
 header .container nav {
   margin-right: 1em;
 }
-header .container nav ul {
+header .container nav .menu {
   list-style-type: none;
   display: flex;
   gap: 2em;
 }
-header .container nav ul a:hover {
+header .container nav .menu a:hover {
   color: var(--text-colour);
   border-bottom: 3px solid var(--dark-pink);
 }
@@ -82,9 +82,6 @@ header .container nav .hamburger-icon div {
   margin: 6px 0;
   transition: 0.3s;
 }
-header .container nav .hamburger-icon .mobile__menu {
-  display: none;
-}
 header .container nav .open .bar__one {
   transform: rotate(-45deg) translate(-6px, 6px);
 }
@@ -93,28 +90,6 @@ header .container nav .open .bar__two {
 }
 header .container nav .open .bar__three {
   transform: rotate(45deg) translate(-6px, -6px);
-}
-header .container nav .open .mobile__menu {
-  display: flex;
-  position: absolute;
-  z-index: 999;
-  flex-direction: column;
-  align-items: center;
-  left: 0;
-  top: 5em;
-  width: 100%;
-  height: calc(100vh - 5em);
-  background: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  padding: 1em 0;
-  text-transform: uppercase;
-}
-header .container nav .open .mobile__menu a:hover {
-  border-bottom: 0px;
-  background: var(--light-pink);
-  color: var(--dark-pink);
-  padding: 0.5em 0.75em;
-  border-radius: 0.5em;
 }
 
 section {
@@ -153,7 +128,7 @@ section p {
   gap: 1em;
   justify-content: space-between;
 }
-.skills .skills__box .skills__box__content ul {
+.skills .skills__box .skills__box__content .menu {
   list-style-type: none;
   padding: 0;
   margin: 0.25em 0;
@@ -282,7 +257,7 @@ footer .social__icons svg:hover path {
 }
 
 @media only screen and (max-width: 1050px) {
-  header .container nav ul {
+  header .container nav .menu {
     gap: 1.25em;
   }
 
@@ -302,11 +277,33 @@ footer .social__icons svg:hover path {
   }
 }
 @media only screen and (max-width: 700px) {
-  header .container nav ul {
-    display: none;
-  }
   header .container nav .hamburger-icon {
     display: block;
+  }
+  header .container nav .menu {
+    visibility: hidden;
+    position: absolute;
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    top: 5em;
+    width: 100%;
+    height: calc(100vh - 5em);
+    background: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 1em 0;
+    text-transform: uppercase;
+  }
+  header .container nav .menu a:hover {
+    border-bottom: 0px;
+    background: var(--light-pink);
+    color: var(--dark-pink);
+    padding: 0.5em 0.75em;
+    border-radius: 0.5em;
+  }
+  header .container nav .menu.open {
+    visibility: visible;
   }
 
   .about {
