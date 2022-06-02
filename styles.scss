@@ -1,11 +1,18 @@
 :root {
-  --font-family: Roboto, sans-serif;
-  --heading-font-family: 'Gochi Hand', cursive;
-  --light-pink: #ffedef;
-  --dark-pink: #ff3256;
   --header-height: 5em;
   scroll-padding-top: var(--header-height);
+
+  // fonts:
+  --font-family: Roboto, sans-serif;
+  --heading-font-family: 'Gochi Hand', cursive;
+
+  // colours:
+  --light-pink: #ffedef;
+  --dark-pink: #ff3256;
+  --text-colour: #000;
+  --background: #fff;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,6 +23,10 @@ body {
   font-family: var(--font-family);
   a {
     text-decoration: none;
+    color: var(--text-colour);
+    &:hover {
+      color: var(--dark-pink);
+    }
   }
   h1 {
     font-family: var(--heading-font-family);
@@ -34,7 +45,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  background: white;
+  background: var(--background);
   height: var(--header-height);
   .container {
     display: flex;
@@ -55,11 +66,9 @@ header {
         list-style-type: none;
         display: flex;
         gap: 2em;
-        a {
-          color: black;
-          &:hover {
-            border-bottom: 3px solid var(--dark-pink);
-          }
+        a:hover {
+          color: var(--text-colour);
+          border-bottom: 3px solid var(--dark-pink);
         }
       }
       .hamburger-icon {
@@ -123,12 +132,6 @@ section {
   p {
     text-align: justify;
   }
-  a {
-    color: black;
-    &:hover {
-      color: var(--dark-pink);
-    }
-  }
 }
 
 .about {
@@ -183,7 +186,7 @@ section {
     .full__time {
       margin-top: .5em;
       span {
-        background: white;
+        background: var(--background);
         border-radius: .2em;
         padding: .25em .5em;
       }
@@ -215,7 +218,7 @@ section {
 }
 
 .education .box {
-  background: white;
+  background: var(--background);
   .box__divider {
     height: 75px;
   }
@@ -271,7 +274,7 @@ section {
     border: none;
     border-radius: .3em;
     padding: 1em;
-    color: white;
+    color: var(--background);
     font-weight: bold;
     margin: .5em 0;
   }
@@ -290,12 +293,6 @@ footer {
           fill: var(--dark-pink);
         }
       }
-    }
-  }
-  a {
-    color: black;
-    &:hover {
-      color: var(--dark-pink);
     }
   }
 }
