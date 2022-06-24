@@ -39,6 +39,7 @@ body h1 {
 }
 
 header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: var(--background);
@@ -120,7 +121,12 @@ section p {
 }
 .skills .skills__box h1 {
   font-family: var(--font-family);
-  margin-bottom: 0;
+  margin-bottom: 0.25em;
+}
+.skills .skills__box .skills__box__content ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
 }
 .skills .skills__box .skills__box__content .skills__box__content__skill {
   display: flex;
@@ -134,7 +140,8 @@ section p {
   margin: 0.25em 0;
 }
 .skills .skills__box .skills__box__content .list__longer {
-  column-count: 2;
+  -moz-column-count: 2;
+       column-count: 2;
 }
 
 .box {
@@ -202,7 +209,8 @@ section p {
 .projects .projects__box img {
   width: 350px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contact__form {
@@ -262,7 +270,8 @@ footer .social__icons svg:hover path {
   }
 
   .skills .skills__box .skills__box__content .list__longer {
-    column-count: 1;
+    -moz-column-count: 1;
+         column-count: 1;
   }
 
   .box .box__content__headings {
@@ -352,6 +361,4 @@ footer .social__icons svg:hover path {
   .projects .projects__box img {
     order: 1;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
