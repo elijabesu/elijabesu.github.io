@@ -39,7 +39,6 @@ body h1 {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: var(--background);
@@ -140,8 +139,7 @@ section p {
   margin: 0.25em 0;
 }
 .skills .skills__box .skills__box__content .list__longer {
-  -moz-column-count: 2;
-       column-count: 2;
+  column-count: 2;
 }
 
 .box {
@@ -167,7 +165,7 @@ section p {
 }
 .box .box__divider {
   border-left: 1px solid var(--dark-pink);
-  height: 150px;
+  height: 75px;
 }
 .box .box__content__headings {
   display: flex;
@@ -192,9 +190,6 @@ section p {
 .education .box {
   background: var(--background);
 }
-.education .box .box__divider {
-  height: 75px;
-}
 
 .projects .projects__box {
   display: flex;
@@ -209,8 +204,7 @@ section p {
 .projects .projects__box img {
   width: 350px;
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .contact__form {
@@ -268,12 +262,9 @@ footer .social__icons svg:hover path {
   header .container nav .menu {
     gap: 1.25em;
   }
-
   .skills .skills__box .skills__box__content .list__longer {
-    -moz-column-count: 1;
-         column-count: 1;
+    column-count: 1;
   }
-
   .box .box__content__headings {
     flex-direction: column;
     gap: 0.25em;
@@ -314,7 +305,6 @@ footer .social__icons svg:hover path {
   header .container nav .menu.open {
     visibility: visible;
   }
-
   .about {
     flex-direction: column;
     align-items: center;
@@ -322,11 +312,9 @@ footer .social__icons svg:hover path {
   .about .heading__section {
     padding: 0.5em 0 0 0.5em;
   }
-
   .skills .skills__box {
     flex-direction: column;
   }
-
   .box {
     flex-direction: column;
     gap: 0;
@@ -345,11 +333,9 @@ footer .social__icons svg:hover path {
     border-left: 0;
     height: 0;
   }
-
   .education .box .box__divider {
     height: 0;
   }
-
   .projects .projects__box {
     flex-direction: column;
     gap: 0;
@@ -361,4 +347,6 @@ footer .social__icons svg:hover path {
   .projects .projects__box img {
     order: 1;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
