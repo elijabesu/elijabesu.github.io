@@ -7,8 +7,10 @@
     --heading-font-family: "Gochi Hand", cursive;
 
     // colours:
-    --light-pink: #ffedef;
-    --dark-pink: #ff3256;
+    --light-colour: #d0fad8;
+    --dark-colour: #e18a94;
+    //--light-colour: #ffd5db;
+    //--dark-colour: #66a29b;
     --text-colour: #000;
     --background: #fff;
 }
@@ -25,7 +27,7 @@ body {
         text-decoration: none;
         color: var(--text-colour);
         &:hover {
-            color: var(--dark-pink);
+            color: var(--dark-colour);
         }
     }
     h1 {
@@ -34,7 +36,7 @@ body {
 }
 
 .coloured {
-    background: var(--light-pink);
+    background: var(--light-colour);
 }
 
 .container {
@@ -68,7 +70,7 @@ header {
                 gap: 2em;
                 a:hover {
                     color: var(--text-colour);
-                    border-bottom: 3px solid var(--dark-pink);
+                    border-bottom: 3px solid var(--dark-colour);
                 }
             }
             .hamburger-icon {
@@ -78,7 +80,7 @@ header {
                 div {
                     width: 35px;
                     height: 3px;
-                    background: var(--dark-pink);
+                    background: var(--dark-colour);
                     margin: 6px 0;
                     transition: 0.3s;
                 }
@@ -173,7 +175,7 @@ section {
         }
     }
     .box__divider {
-        border-left: 1px solid var(--dark-pink);
+        border-left: 1px solid var(--dark-colour);
         height: 75px;
     }
     .box__content__headings {
@@ -185,7 +187,7 @@ section {
             font-weight: 900;
         }
         .coloured__heading {
-            color: var(--dark-pink);
+            color: var(--dark-colour);
         }
     }
     p {
@@ -194,7 +196,7 @@ section {
 }
 
 .experience .box {
-    background: var(--light-pink);
+    background: var(--light-colour);
 }
 
 .education .box {
@@ -247,13 +249,16 @@ section {
         }
     }
     .contact__form__button {
-        background: var(--dark-pink);
+        background: var(--dark-colour);
         border: none;
         border-radius: 0.3em;
         padding: 1em;
         color: var(--background);
         font-weight: bold;
         margin: 0.5em 0;
+        &:hover {
+            color: var(--light-colour);
+        }
     }
 }
 
@@ -267,7 +272,7 @@ footer {
             width: 25px;
             &:hover {
                 path {
-                    fill: var(--dark-pink);
+                    fill: var(--dark-colour);
                 }
             }
         }
@@ -319,9 +324,9 @@ footer {
                 padding: 1em 0;
                 text-transform: uppercase;
                 a:hover {
-                    border-bottom: 0px;
-                    background: var(--light-pink);
-                    color: var(--dark-pink);
+                    border-bottom: 0;
+                    background: var(--light-colour);
+                    color: var(--dark-colour);
                     padding: 0.5em 0.75em;
                     border-radius: 0.5em;
                 }

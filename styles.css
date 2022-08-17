@@ -3,8 +3,8 @@
   scroll-padding-top: var(--header-height);
   --font-family: Roboto, sans-serif;
   --heading-font-family: "Gochi Hand", cursive;
-  --light-pink: #ffedef;
-  --dark-pink: #ff3256;
+  --light-colour: #d0fad8;
+  --dark-colour: #e18a94;
   --text-colour: #000;
   --background: #fff;
 }
@@ -23,14 +23,14 @@ body a {
   color: var(--text-colour);
 }
 body a:hover {
-  color: var(--dark-pink);
+  color: var(--dark-colour);
 }
 body h1 {
   font-family: var(--heading-font-family);
 }
 
 .coloured {
-  background: var(--light-pink);
+  background: var(--light-colour);
 }
 
 .container {
@@ -68,7 +68,7 @@ header .container nav .menu {
 }
 header .container nav .menu a:hover {
   color: var(--text-colour);
-  border-bottom: 3px solid var(--dark-pink);
+  border-bottom: 3px solid var(--dark-colour);
 }
 header .container nav .hamburger-icon {
   margin: auto;
@@ -78,7 +78,7 @@ header .container nav .hamburger-icon {
 header .container nav .hamburger-icon div {
   width: 35px;
   height: 3px;
-  background: var(--dark-pink);
+  background: var(--dark-colour);
   margin: 6px 0;
   transition: 0.3s;
 }
@@ -164,7 +164,7 @@ section p {
   padding: 0.25em 0.5em;
 }
 .box .box__divider {
-  border-left: 1px solid var(--dark-pink);
+  border-left: 1px solid var(--dark-colour);
   height: 75px;
 }
 .box .box__content__headings {
@@ -177,14 +177,14 @@ section p {
   font-weight: 900;
 }
 .box .box__content__headings .coloured__heading {
-  color: var(--dark-pink);
+  color: var(--dark-colour);
 }
 .box p {
   margin-top: 0;
 }
 
 .experience .box {
-  background: var(--light-pink);
+  background: var(--light-colour);
 }
 
 .education .box {
@@ -236,13 +236,16 @@ section p {
   outline: none;
 }
 .contact__form .contact__form__button {
-  background: var(--dark-pink);
+  background: var(--dark-colour);
   border: none;
   border-radius: 0.3em;
   padding: 1em;
   color: var(--background);
   font-weight: bold;
   margin: 0.5em 0;
+}
+.contact__form .contact__form__button:hover {
+  color: var(--light-colour);
 }
 
 footer {
@@ -255,7 +258,7 @@ footer .social__icons svg {
   width: 25px;
 }
 footer .social__icons svg:hover path {
-  fill: var(--dark-pink);
+  fill: var(--dark-colour);
 }
 
 @media only screen and (max-width: 1050px) {
@@ -296,9 +299,9 @@ footer .social__icons svg:hover path {
     text-transform: uppercase;
   }
   header .container nav .menu a:hover {
-    border-bottom: 0px;
-    background: var(--light-pink);
-    color: var(--dark-pink);
+    border-bottom: 0;
+    background: var(--light-colour);
+    color: var(--dark-colour);
     padding: 0.5em 0.75em;
     border-radius: 0.5em;
   }
